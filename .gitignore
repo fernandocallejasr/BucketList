@@ -134,5 +134,6 @@ iOSInjectionProject/
 ### Project Specifics ###
 BucketList/Learning/
 BucketList/Data/FileManagerExtension.swift
+!/BucketList/Learning/IntegratingMapKit.swift
 
 # End of https://www.toptal.com/developers/gitignore/api/swift,macos,xcode

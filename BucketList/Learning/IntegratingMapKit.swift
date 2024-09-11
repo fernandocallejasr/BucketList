@@ -24,8 +24,8 @@ struct IntegratingMapKit: View {
     )
     
     let locations = [
-        Location(name: "Buckingham Palace", coordinate: CLLocationCoordinate2D(latitude: 51.501, longitude: -0.141)),
-        Location(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 51.508, longitude: -0.076))
+        LocalLocation(name: "Buckingham Palace", coordinate: CLLocationCoordinate2D(latitude: 51.501, longitude: -0.141)),
+        LocalLocation(name: "Tower of London", coordinate: CLLocationCoordinate2D(latitude: 51.508, longitude: -0.076))
     ]
     
     var body: some View {
@@ -86,7 +86,7 @@ struct IntegratingMapKit: View {
     }
 }
 
-struct Location: Identifiable {
+struct LocalLocation: Identifiable {
     let id = UUID()
     var name: String
     var coordinate: CLLocationCoordinate2D

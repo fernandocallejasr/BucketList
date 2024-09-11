@@ -16,6 +16,8 @@
 		847CEB272C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB262C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift */; };
 		847CEB292C8F802200482D11 /* IntegratingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB282C8F802200482D11 /* IntegratingMapKit.swift */; };
 		847CEB2B2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */; };
+		84A278292C9122890063C375 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A278282C9122890063C375 /* TestFile.swift */; };
+		84A2782B2C9122C80063C375 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2782A2C9122C80063C375 /* Location.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +31,8 @@
 		847CEB262C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchingViewStatesWithEnum.swift; sourceTree = "<group>"; };
 		847CEB282C8F802200482D11 /* IntegratingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratingMapKit.swift; sourceTree = "<group>"; };
 		847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingTouchIDAndFaceID.swift; sourceTree = "<group>"; };
+		84A278282C9122890063C375 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
+		84A2782A2C9122C80063C375 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				847CEB212C8F6D1B00482D11 /* FileManagerExtension.swift */,
+				84A2782A2C9122C80063C375 /* Location.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -94,6 +99,7 @@
 				847CEB262C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift */,
 				847CEB282C8F802200482D11 /* IntegratingMapKit.swift */,
 				847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */,
+				84A278282C9122890063C375 /* TestFile.swift */,
 			);
 			path = Learning;
 			sourceTree = "<group>";
@@ -169,8 +175,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				847CEB152C83A1D900482D11 /* ContentView.swift in Sources */,
+				84A278292C9122890063C375 /* TestFile.swift in Sources */,
 				847CEB252C8F7B9200482D11 /* WriteDataToDocumentsDirectory.swift in Sources */,
 				847CEB292C8F802200482D11 /* IntegratingMapKit.swift in Sources */,
+				84A2782B2C9122C80063C375 /* Location.swift in Sources */,
 				847CEB222C8F6D1B00482D11 /* FileManagerExtension.swift in Sources */,
 				847CEB272C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift in Sources */,
 				847CEB2B2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift in Sources */,
