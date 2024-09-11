@@ -5,17 +5,24 @@
 //  Created by Fernando Callejas on 31/08/24.
 //
 
+import MapKit
 import SwiftUI
 
 struct ContentView: View {
+    let startPosition = MapCameraPosition.region(
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: 56, longitude: -3),
+            span: MKCoordinateSpan(latitudeDelta: 10, longitudeDelta: 10)
+        )
+    )
+
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            Map(initialPosition: startPosition)
+                .onTapGesture { position in
+                    print("Tapped at: \(position)")
+                }
         }
-        .padding()
     }
 }
 

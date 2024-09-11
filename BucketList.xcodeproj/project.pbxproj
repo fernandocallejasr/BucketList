@@ -11,6 +11,11 @@
 		847CEB152C83A1D900482D11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB142C83A1D900482D11 /* ContentView.swift */; };
 		847CEB172C83A1DB00482D11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847CEB162C83A1DB00482D11 /* Assets.xcassets */; };
 		847CEB1A2C83A1DB00482D11 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847CEB192C83A1DB00482D11 /* Preview Assets.xcassets */; };
+		847CEB222C8F6D1B00482D11 /* FileManagerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB212C8F6D1B00482D11 /* FileManagerExtension.swift */; };
+		847CEB252C8F7B9200482D11 /* WriteDataToDocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB242C8F7B9200482D11 /* WriteDataToDocumentsDirectory.swift */; };
+		847CEB272C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB262C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift */; };
+		847CEB292C8F802200482D11 /* IntegratingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB282C8F802200482D11 /* IntegratingMapKit.swift */; };
+		847CEB2B2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		847CEB142C83A1D900482D11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		847CEB162C83A1DB00482D11 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		847CEB192C83A1DB00482D11 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		847CEB212C8F6D1B00482D11 /* FileManagerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManagerExtension.swift; sourceTree = "<group>"; };
+		847CEB242C8F7B9200482D11 /* WriteDataToDocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteDataToDocumentsDirectory.swift; sourceTree = "<group>"; };
+		847CEB262C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchingViewStatesWithEnum.swift; sourceTree = "<group>"; };
+		847CEB282C8F802200482D11 /* IntegratingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratingMapKit.swift; sourceTree = "<group>"; };
+		847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingTouchIDAndFaceID.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +61,8 @@
 		847CEB112C83A1D900482D11 /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
+				847CEB232C8F7B6300482D11 /* Learning */,
+				847CEB202C8F6D0400482D11 /* Data */,
 				847CEB122C83A1D900482D11 /* BucketListApp.swift */,
 				847CEB142C83A1D900482D11 /* ContentView.swift */,
 				847CEB162C83A1DB00482D11 /* Assets.xcassets */,
@@ -65,6 +77,25 @@
 				847CEB192C83A1DB00482D11 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		847CEB202C8F6D0400482D11 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				847CEB212C8F6D1B00482D11 /* FileManagerExtension.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		847CEB232C8F7B6300482D11 /* Learning */ = {
+			isa = PBXGroup;
+			children = (
+				847CEB242C8F7B9200482D11 /* WriteDataToDocumentsDirectory.swift */,
+				847CEB262C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift */,
+				847CEB282C8F802200482D11 /* IntegratingMapKit.swift */,
+				847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */,
+			);
+			path = Learning;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +169,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				847CEB152C83A1D900482D11 /* ContentView.swift in Sources */,
+				847CEB252C8F7B9200482D11 /* WriteDataToDocumentsDirectory.swift in Sources */,
+				847CEB292C8F802200482D11 /* IntegratingMapKit.swift in Sources */,
+				847CEB222C8F6D1B00482D11 /* FileManagerExtension.swift in Sources */,
+				847CEB272C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift in Sources */,
+				847CEB2B2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift in Sources */,
 				847CEB132C83A1D900482D11 /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +311,7 @@
 				DEVELOPMENT_TEAM = XL9L4JVB38;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +341,7 @@
 				DEVELOPMENT_TEAM = XL9L4JVB38;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
