@@ -19,6 +19,8 @@
 		84A278292C9122890063C375 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A278282C9122890063C375 /* TestFile.swift */; };
 		84A2782B2C9122C80063C375 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2782A2C9122C80063C375 /* Location.swift */; };
 		84A2782E2C92AB130063C375 /* CustomMapMarkerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2782D2C92AB130063C375 /* CustomMapMarkerAnnotation.swift */; };
+		84A278302C939DDE0063C375 /* EditMapMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2782F2C939DDE0063C375 /* EditMapMarkerView.swift */; };
+		84A278322C939F960063C375 /* CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A278312C939F960063C375 /* CustomColors.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +37,8 @@
 		84A278282C9122890063C375 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		84A2782A2C9122C80063C375 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		84A2782D2C92AB130063C375 /* CustomMapMarkerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapMarkerAnnotation.swift; sourceTree = "<group>"; };
+		84A2782F2C939DDE0063C375 /* EditMapMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMapMarkerView.swift; sourceTree = "<group>"; };
+		84A278312C939F960063C375 /* CustomColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomColors.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +115,8 @@
 			isa = PBXGroup;
 			children = (
 				84A2782D2C92AB130063C375 /* CustomMapMarkerAnnotation.swift */,
+				84A2782F2C939DDE0063C375 /* EditMapMarkerView.swift */,
+				84A278312C939F960063C375 /* CustomColors.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +192,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A2782E2C92AB130063C375 /* CustomMapMarkerAnnotation.swift in Sources */,
+				84A278302C939DDE0063C375 /* EditMapMarkerView.swift in Sources */,
 				847CEB152C83A1D900482D11 /* ContentView.swift in Sources */,
 				84A278292C9122890063C375 /* TestFile.swift in Sources */,
 				847CEB252C8F7B9200482D11 /* WriteDataToDocumentsDirectory.swift in Sources */,
@@ -194,6 +201,7 @@
 				847CEB222C8F6D1B00482D11 /* FileManagerExtension.swift in Sources */,
 				847CEB272C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift in Sources */,
 				847CEB2B2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift in Sources */,
+				84A278322C939F960063C375 /* CustomColors.swift in Sources */,
 				847CEB132C83A1D900482D11 /* BucketListApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
