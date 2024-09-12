@@ -23,9 +23,9 @@ struct ContentView: View {
             MapReader { proxy in
                 Map(initialPosition: startPosition) {
                     ForEach(locations) { location in
-                        Marker(location.name, systemImage: "star", coordinate: CLLocationCoordinate2D(
-                            latitude: location.latitude, longitude: location.longitude)
-                        )
+                        Annotation(location.name,coordinate: location.coordinate) {
+                            CustomMapMarkerAnnotation()
+                        }
                     }
                 }
                 .onTapGesture { position in

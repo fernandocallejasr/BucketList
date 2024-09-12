@@ -18,6 +18,7 @@
 		847CEB2B2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */; };
 		84A278292C9122890063C375 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A278282C9122890063C375 /* TestFile.swift */; };
 		84A2782B2C9122C80063C375 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2782A2C9122C80063C375 /* Location.swift */; };
+		84A2782E2C92AB130063C375 /* CustomMapMarkerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2782D2C92AB130063C375 /* CustomMapMarkerAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingTouchIDAndFaceID.swift; sourceTree = "<group>"; };
 		84A278282C9122890063C375 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		84A2782A2C9122C80063C375 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		84A2782D2C92AB130063C375 /* CustomMapMarkerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapMarkerAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +67,7 @@
 		847CEB112C83A1D900482D11 /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
+				84A2782C2C92AAF60063C375 /* View */,
 				847CEB232C8F7B6300482D11 /* Learning */,
 				847CEB202C8F6D0400482D11 /* Data */,
 				847CEB122C83A1D900482D11 /* BucketListApp.swift */,
@@ -102,6 +105,14 @@
 				84A278282C9122890063C375 /* TestFile.swift */,
 			);
 			path = Learning;
+			sourceTree = "<group>";
+		};
+		84A2782C2C92AAF60063C375 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84A2782D2C92AB130063C375 /* CustomMapMarkerAnnotation.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84A2782E2C92AB130063C375 /* CustomMapMarkerAnnotation.swift in Sources */,
 				847CEB152C83A1D900482D11 /* ContentView.swift in Sources */,
 				84A278292C9122890063C375 /* TestFile.swift in Sources */,
 				847CEB252C8F7B9200482D11 /* WriteDataToDocumentsDirectory.swift in Sources */,
