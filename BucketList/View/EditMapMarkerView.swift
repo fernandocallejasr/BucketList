@@ -13,7 +13,7 @@ struct EditMapMarkerView: View {
     
     @State private var name: String
     @State private var description: String
-    @State private var loadingState = LoadingState.loaded
+    @State private var loadingState = LoadingState.loading
     @State private var pages = [Page]()
     
     var onSave: (Location) -> Void
@@ -70,12 +70,12 @@ struct EditMapMarkerView: View {
                         switch loadingState {
                         case .loaded:
                             ScrollView {
-                                VStack {
+                                VStack(alignment: .leading) {
                                     ForEach(pages, id: \.pageid) { page in
                                         Text(page.title)
                                             .font(.headline)
                                         + Text(": ") +
-                                        Text("Page description here")
+                                        Text(page.description)
                                             .italic()
                                     }
                                 }
@@ -83,7 +83,10 @@ struct EditMapMarkerView: View {
                             }
                             .padding(.top)
                         case .loading:
-                            Text("Loading...")
+                            VStack {
+                                Text("Loading...")
+                            }
+                            .frame(height: 155)
                         case .failed:
                             Text("Please try again later.")
                         }
@@ -142,9 +145,7 @@ struct EditMapMarkerView: View {
 
             let result = try JSONDecoder().decode(Result.self, from: data)
 
-            pages = result.query.pages.values.sorted { page1, page2 in
-                page1.title < page2.title
-            }
+            pages = result.query.pages.values.sorted()
             loadingState = .loaded
         } catch {
             loadingState = .failed
