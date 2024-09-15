@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SwitchingViewStatesWithEnum: View {
-    @State private var loadingState = LoadingState.success
+    @State private var loadingState = LoadingStatePractice.success
     
     var body: some View {
         if loadingState == .loading {
@@ -21,7 +21,7 @@ struct SwitchingViewStatesWithEnum: View {
     }
 }
 
-enum LoadingState {
+enum LoadingStatePractice {
     case loading
     case success
     case failed

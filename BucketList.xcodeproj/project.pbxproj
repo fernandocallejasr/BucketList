@@ -16,6 +16,10 @@
 		847CEB272C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB262C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift */; };
 		847CEB292C8F802200482D11 /* IntegratingMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB282C8F802200482D11 /* IntegratingMapKit.swift */; };
 		847CEB2B2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */; };
+		848163572C93F63A00E90001 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848163562C93F63A00E90001 /* Result.swift */; };
+		848163592C93F66400E90001 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848163582C93F66400E90001 /* Query.swift */; };
+		8481635B2C93F68A00E90001 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481635A2C93F68A00E90001 /* Page.swift */; };
+		8481635D2C93F77900E90001 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481635C2C93F77900E90001 /* LoadingState.swift */; };
 		84A278292C9122890063C375 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A278282C9122890063C375 /* TestFile.swift */; };
 		84A2782B2C9122C80063C375 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2782A2C9122C80063C375 /* Location.swift */; };
 		84A2782E2C92AB130063C375 /* CustomMapMarkerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2782D2C92AB130063C375 /* CustomMapMarkerAnnotation.swift */; };
@@ -34,6 +38,10 @@
 		847CEB262C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwitchingViewStatesWithEnum.swift; sourceTree = "<group>"; };
 		847CEB282C8F802200482D11 /* IntegratingMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntegratingMapKit.swift; sourceTree = "<group>"; };
 		847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingTouchIDAndFaceID.swift; sourceTree = "<group>"; };
+		848163562C93F63A00E90001 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		848163582C93F66400E90001 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
+		8481635A2C93F68A00E90001 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		8481635C2C93F77900E90001 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
 		84A278282C9122890063C375 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		84A2782A2C9122C80063C375 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		84A2782D2C92AB130063C375 /* CustomMapMarkerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapMarkerAnnotation.swift; sourceTree = "<group>"; };
@@ -95,6 +103,10 @@
 			children = (
 				847CEB212C8F6D1B00482D11 /* FileManagerExtension.swift */,
 				84A2782A2C9122C80063C375 /* Location.swift */,
+				848163562C93F63A00E90001 /* Result.swift */,
+				848163582C93F66400E90001 /* Query.swift */,
+				8481635A2C93F68A00E90001 /* Page.swift */,
+				8481635C2C93F77900E90001 /* LoadingState.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -192,17 +204,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				84A2782E2C92AB130063C375 /* CustomMapMarkerAnnotation.swift in Sources */,
+				848163572C93F63A00E90001 /* Result.swift in Sources */,
 				84A278302C939DDE0063C375 /* EditMapMarkerView.swift in Sources */,
 				847CEB152C83A1D900482D11 /* ContentView.swift in Sources */,
 				84A278292C9122890063C375 /* TestFile.swift in Sources */,
 				847CEB252C8F7B9200482D11 /* WriteDataToDocumentsDirectory.swift in Sources */,
 				847CEB292C8F802200482D11 /* IntegratingMapKit.swift in Sources */,
 				84A2782B2C9122C80063C375 /* Location.swift in Sources */,
+				848163592C93F66400E90001 /* Query.swift in Sources */,
 				847CEB222C8F6D1B00482D11 /* FileManagerExtension.swift in Sources */,
 				847CEB272C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift in Sources */,
 				847CEB2B2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift in Sources */,
+				8481635D2C93F77900E90001 /* LoadingState.swift in Sources */,
 				84A278322C939F960063C375 /* CustomColors.swift in Sources */,
 				847CEB132C83A1D900482D11 /* BucketListApp.swift in Sources */,
+				8481635B2C93F68A00E90001 /* Page.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
