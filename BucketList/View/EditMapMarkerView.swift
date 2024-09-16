@@ -9,21 +9,14 @@ import SwiftUI
 
 struct EditMapMarkerView: View {
     @Environment(\.dismiss) var dismiss
-    var location: Location
     
-    @State private var name: String
-    @State private var description: String
-    @State private var loadingState = LoadingState.loading
-    @State private var pages = [Page]()
+    @StateObject private var viewModel: ViewModel
     
     var onSave: (Location) -> Void
     
     init(location: Location, onSave: @escaping (Location) -> Void) {
-        self.location = location
         self.onSave = onSave
-        
-        _name = State(initialValue: location.name)
-        _description = State(initialValue: location.description)
+        _viewModel = StateObject(wrappedValue: ViewModel(location: location))
     }
     
     var body: some View {
@@ -42,7 +35,7 @@ struct EditMapMarkerView: View {
                         .padding(.leading, 60)
                         .padding(.bottom, 10)
                         
-                        TextField("Place Name", text: $name)
+                        TextField("Place Name", text: $viewModel.name)
                             .frame(width: 250, height: 30)
                             .padding()
                             .background(.customColorGhostWhite)
@@ -58,7 +51,7 @@ struct EditMapMarkerView: View {
                         .padding(.leading, 60)
                         .padding(.bottom, 10)
                         
-                        TextEditor(text: $description)
+                        TextEditor(text: $viewModel.description)
                             .scrollContentBackground(.hidden)
                             .frame(width: 250, height: 150)
                             .padding()
@@ -77,11 +70,11 @@ struct EditMapMarkerView: View {
                         
                         VStack {
                             
-                            switch loadingState {
+                            switch viewModel.loadingState {
                             case .loaded:
                                 ScrollView {
                                     VStack(alignment: .leading) {
-                                        ForEach(pages, id: \.pageid) { page in
+                                        ForEach(viewModel.pages, id: \.pageid) { page in
                                             Text(page.title)
                                                 .font(.headline)
                                             + Text(": ") +
@@ -110,12 +103,8 @@ struct EditMapMarkerView: View {
             .toolbar {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Save") {
-                        var newLocation = location
-//                        newLocation.id = UUID()
-                        newLocation.name = name
-                        newLocation.description = description
-                        
-                        onSave(newLocation)
+                        viewModel.saveLocation()
+                        onSave(viewModel.location)
                         dismiss()
                     }
                     .padding(5)
@@ -127,40 +116,12 @@ struct EditMapMarkerView: View {
             }
             .onAppear {
                 Task {
-                    await fetchNearbyPlaces()
+                    await viewModel.fetchNearbyPlaces()
                 }
             }
 //            .task {
 //                await fetchNearbyPlaces()
 //            }
-        }
-    }
-    
-    func fetchNearbyPlaces() async {
-        let longitude = location.longitude
-        let latitude = location.latitude
-        
-        let urlString = "https://en.wikipedia.org/w/api.php?ggscoord=\(latitude)%7C\(longitude)&action=query&prop=coordinates%7Cpageimages%7Cpageterms&colimit=50&piprop=thumbnail&pithumbsize=500&pilimit=50&wbptterms=description&generator=geosearch&ggsradius=10000&ggslimit=50&format=json"
-
-        
-        guard let url = URL(string: urlString) else {
-            print("Could not create URL")
-            return
-        }
-        
-        var urlRequest = URLRequest(url: url)
-        urlRequest.httpMethod = "GET"
-        
-        do {
-            let (data, _) = try await URLSession.shared.data(for: urlRequest)
-
-            let result = try JSONDecoder().decode(Result.self, from: data)
-
-            pages = result.query.pages.values.sorted()
-            loadingState = .loaded
-        } catch {
-            loadingState = .failed
-            print("Error retrieving data: \(error.localizedDescription)")
         }
     }
 }
