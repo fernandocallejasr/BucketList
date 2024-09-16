@@ -35,7 +35,7 @@ struct EditMapMarkerView: View {
                 
                 VStack {
                     LazyVStack(alignment: .leading) {
-                        Text("City")
+                        Text("Location")
                             .font(.title3)
                     }
                     .padding(.leading, 60)
@@ -100,14 +100,14 @@ struct EditMapMarkerView: View {
                 ToolbarItem(placement: .primaryAction) {
                     Button("Save") {
                         var newLocation = location
-                        newLocation.id = UUID()
+//                        newLocation.id = UUID()
                         newLocation.name = name
                         newLocation.description = description
                         
                         onSave(newLocation)
                         dismiss()
                     }
-                    .padding(10)
+                    .padding(5)
                     .background(.customColorGhostWhite)
                     .clipShape(.rect(cornerRadius: 25, style: .circular))
                     .shadow(color: .black.opacity(0.2), radius: 10)

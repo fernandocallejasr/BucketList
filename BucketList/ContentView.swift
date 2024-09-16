@@ -9,8 +9,7 @@ import MapKit
 import SwiftUI
 
 struct ContentView: View {
-    @State private var selectedPlace: Location?
-    @State private var locations = [Location]()
+    @StateObject var viewModel = ViewModel()
     
     let startPosition = MapCameraPosition.region(
         MKCoordinateRegion(
@@ -23,11 +22,11 @@ struct ContentView: View {
         NavigationStack {
             MapReader { proxy in
                 Map(initialPosition: startPosition) {
-                    ForEach(locations) { location in
+                    ForEach(viewModel.locations) { location in
                         Annotation(location.name,coordinate: location.coordinate) {
                             CustomMapMarkerAnnotation()
                                 .onLongPressGesture {
-                                    selectedPlace = location
+                                    viewModel.selectedPlace = location
                                 }
                         }
                     }
@@ -36,17 +35,14 @@ struct ContentView: View {
                     if let coordinate = proxy.convert(position, from: .local) {
                         print("Tapped at \(coordinate)")
                         
-                        let newLocation = Location(id: UUID(), name: "New Location", description: "Description", latitude: coordinate.latitude, longitude: coordinate.longitude)
-                        locations.append(newLocation)
+                        viewModel.addLocation(at: coordinate)
                     }
                 }
             }
         }
-        .sheet(item: $selectedPlace) { place in
+        .sheet(item: $viewModel.selectedPlace) { place in
             EditMapMarkerView(location: place) { newLocation in
-                if let index = locations.firstIndex(of: place) {
-                    locations[index] = newLocation
-                }
+                viewModel.updateLocation(newLocation)
             }
         }
     }

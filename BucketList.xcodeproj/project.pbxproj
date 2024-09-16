@@ -20,6 +20,7 @@
 		848163592C93F66400E90001 /* Query.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848163582C93F66400E90001 /* Query.swift */; };
 		8481635B2C93F68A00E90001 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481635A2C93F68A00E90001 /* Page.swift */; };
 		8481635D2C93F77900E90001 /* LoadingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481635C2C93F77900E90001 /* LoadingState.swift */; };
+		848163602C974BC500E90001 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481635F2C974BC500E90001 /* ContentView-ViewModel.swift */; };
 		84A278292C9122890063C375 /* TestFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A278282C9122890063C375 /* TestFile.swift */; };
 		84A2782B2C9122C80063C375 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2782A2C9122C80063C375 /* Location.swift */; };
 		84A2782E2C92AB130063C375 /* CustomMapMarkerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A2782D2C92AB130063C375 /* CustomMapMarkerAnnotation.swift */; };
@@ -42,6 +43,7 @@
 		848163582C93F66400E90001 /* Query.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Query.swift; sourceTree = "<group>"; };
 		8481635A2C93F68A00E90001 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		8481635C2C93F77900E90001 /* LoadingState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingState.swift; sourceTree = "<group>"; };
+		8481635F2C974BC500E90001 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 		84A278282C9122890063C375 /* TestFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFile.swift; sourceTree = "<group>"; };
 		84A2782A2C9122C80063C375 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		84A2782D2C92AB130063C375 /* CustomMapMarkerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomMapMarkerAnnotation.swift; sourceTree = "<group>"; };
@@ -79,9 +81,10 @@
 		847CEB112C83A1D900482D11 /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
+				8481635E2C974B9E00E90001 /* ModelView */,
 				84A2782C2C92AAF60063C375 /* View */,
 				847CEB232C8F7B6300482D11 /* Learning */,
-				847CEB202C8F6D0400482D11 /* Data */,
+				847CEB202C8F6D0400482D11 /* Model */,
 				847CEB122C83A1D900482D11 /* BucketListApp.swift */,
 				847CEB142C83A1D900482D11 /* ContentView.swift */,
 				847CEB162C83A1DB00482D11 /* Assets.xcassets */,
@@ -98,7 +101,7 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		847CEB202C8F6D0400482D11 /* Data */ = {
+		847CEB202C8F6D0400482D11 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				847CEB212C8F6D1B00482D11 /* FileManagerExtension.swift */,
@@ -108,7 +111,7 @@
 				8481635A2C93F68A00E90001 /* Page.swift */,
 				8481635C2C93F77900E90001 /* LoadingState.swift */,
 			);
-			path = Data;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		847CEB232C8F7B6300482D11 /* Learning */ = {
@@ -121,6 +124,14 @@
 				84A278282C9122890063C375 /* TestFile.swift */,
 			);
 			path = Learning;
+			sourceTree = "<group>";
+		};
+		8481635E2C974B9E00E90001 /* ModelView */ = {
+			isa = PBXGroup;
+			children = (
+				8481635F2C974BC500E90001 /* ContentView-ViewModel.swift */,
+			);
+			path = ModelView;
 			sourceTree = "<group>";
 		};
 		84A2782C2C92AAF60063C375 /* View */ = {
@@ -211,6 +222,7 @@
 				847CEB252C8F7B9200482D11 /* WriteDataToDocumentsDirectory.swift in Sources */,
 				847CEB292C8F802200482D11 /* IntegratingMapKit.swift in Sources */,
 				84A2782B2C9122C80063C375 /* Location.swift in Sources */,
+				848163602C974BC500E90001 /* ContentView-ViewModel.swift in Sources */,
 				848163592C93F66400E90001 /* Query.swift in Sources */,
 				847CEB222C8F6D1B00482D11 /* FileManagerExtension.swift in Sources */,
 				847CEB272C8F7D0100482D11 /* SwitchingViewStatesWithEnum.swift in Sources */,
