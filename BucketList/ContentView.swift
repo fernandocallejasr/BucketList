@@ -20,7 +20,7 @@ struct ContentView: View {
 
     var body: some View {
         if viewModel.isUnlocked {
-            NavigationStack {
+            ZStack(alignment: .bottom) {
                 MapReader { proxy in
                     Map(initialPosition: startPosition) {
                         ForEach(viewModel.locations) { location in
@@ -32,6 +32,7 @@ struct ContentView: View {
                             }
                         }
                     }
+                    .mapStyle(viewModel.mapStyle)
                     .onTapGesture { position in
                         if let coordinate = proxy.convert(position, from: .local) {
                             print("Tapped at \(coordinate)")
@@ -40,6 +41,15 @@ struct ContentView: View {
                         }
                     }
                 }
+                
+                Picker("Select Map Style", selection: $viewModel.mapTypeSelection) {
+                    ForEach(MapSelection.allCases, id: \.self) { selection in
+                        Text(selection.rawValue)
+                    }
+                }
+                .padding(.bottom, 40)
+                .padding(.horizontal)
+                .pickerStyle(.segmented)
             }
             .sheet(item: $viewModel.selectedPlace) { place in
                 EditMapMarkerView(location: place) { newLocation in
