@@ -33,66 +33,77 @@ struct EditMapMarkerView: View {
                     .customColorGhostWhite
                     .ignoresSafeArea()
                 
-                VStack {
-                    LazyVStack(alignment: .leading) {
-                        Text("Location")
-                            .font(.title3)
-                    }
-                    .padding(.leading, 60)
-                    .padding(.bottom, 10)
-                    
-                    TextField("Place Name", text: $name)
-                        .frame(width: 250, height: 30)
-                        .padding()
-                        .background(.customColorGhostWhite)
-                        .clipShape(.rect(cornerRadius: 25, style: .circular))
-                        .shadow(color: .black.opacity(0.2), radius: 10)
-                        .multilineTextAlignment(.center)
-                        .padding(.bottom, 30)
-                    
-                    LazyVStack(alignment: .leading) {
-                        Text("Description")
-                            .font(.title3)
-                    }
-                    .padding(.leading, 60)
-                    .padding(.bottom, 10)
-                    
-                    TextField("Place Description", text: $description)
-                        .frame(width: 250, height: 200)
-                        .padding()
-                        .background(.customColorGhostWhite)
-                        .clipShape(.rect(cornerRadius: 25, style: .circular))
-                        .shadow(color: .black.opacity(0.2), radius: 10)
-                        .multilineTextAlignment(.center)
-                    
+                ScrollView {
                     VStack {
+                        LazyVStack(alignment: .leading) {
+                            Text("Location")
+                                .font(.title3)
+                        }
+                        .padding(.leading, 60)
+                        .padding(.bottom, 10)
                         
-                        switch loadingState {
-                        case .loaded:
-                            ScrollView {
-                                VStack(alignment: .leading) {
-                                    ForEach(pages, id: \.pageid) { page in
-                                        Text(page.title)
-                                            .font(.headline)
-                                        + Text(": ") +
-                                        Text(page.description)
-                                            .italic()
+                        TextField("Place Name", text: $name)
+                            .frame(width: 250, height: 30)
+                            .padding()
+                            .background(.customColorGhostWhite)
+                            .clipShape(.rect(cornerRadius: 25, style: .circular))
+                            .shadow(color: .black.opacity(0.2), radius: 10)
+                            .multilineTextAlignment(.center)
+                            .padding(.bottom, 30)
+                        
+                        LazyVStack(alignment: .leading) {
+                            Text("Description")
+                                .font(.title3)
+                        }
+                        .padding(.leading, 60)
+                        .padding(.bottom, 10)
+                        
+                        TextEditor(text: $description)
+                            .scrollContentBackground(.hidden)
+                            .frame(width: 250, height: 150)
+                            .padding()
+                            .background(.customColorGhostWhite)
+                            .clipShape(.rect(cornerRadius: 25, style: .circular))
+                            .shadow(color: .black.opacity(0.2), radius: 10)
+                            .multilineTextAlignment(.center)
+                        
+                        LazyVStack(alignment: .leading) {
+                            Text("Places of interest close")
+                                .font(.title2)
+                                .fontWeight(.bold)
+                        }
+                        .padding(.horizontal)
+                        .padding(.top, 10)
+                        
+                        VStack {
+                            
+                            switch loadingState {
+                            case .loaded:
+                                ScrollView {
+                                    VStack(alignment: .leading) {
+                                        ForEach(pages, id: \.pageid) { page in
+                                            Text(page.title)
+                                                .font(.headline)
+                                            + Text(": ") +
+                                            Text(page.description)
+                                                .italic()
+                                        }
                                     }
+                                    .padding(.horizontal)
                                 }
-                                .padding(.horizontal)
+                                .padding(.top)
+                            case .loading:
+                                VStack {
+                                    Text("Loading...")
+                                }
+                                .frame(height: 155)
+                            case .failed:
+                                Text("Please try again later.")
                             }
-                            .padding(.top)
-                        case .loading:
-                            VStack {
-                                Text("Loading...")
-                            }
-                            .frame(height: 155)
-                        case .failed:
-                            Text("Please try again later.")
+                            
                         }
                         
                     }
-                    
                 }
             }
             .navigationTitle("Place details")

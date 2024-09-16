@@ -19,31 +19,40 @@ struct ContentView: View {
     )
 
     var body: some View {
-        NavigationStack {
-            MapReader { proxy in
-                Map(initialPosition: startPosition) {
-                    ForEach(viewModel.locations) { location in
-                        Annotation(location.name,coordinate: location.coordinate) {
-                            CustomMapMarkerAnnotation()
-                                .onLongPressGesture {
-                                    viewModel.selectedPlace = location
-                                }
+        if viewModel.isUnlocked {
+            NavigationStack {
+                MapReader { proxy in
+                    Map(initialPosition: startPosition) {
+                        ForEach(viewModel.locations) { location in
+                            Annotation(location.name,coordinate: location.coordinate) {
+                                CustomMapMarkerAnnotation()
+                                    .onLongPressGesture {
+                                        viewModel.selectedPlace = location
+                                    }
+                            }
+                        }
+                    }
+                    .onTapGesture { position in
+                        if let coordinate = proxy.convert(position, from: .local) {
+                            print("Tapped at \(coordinate)")
+                            
+                            viewModel.addLocation(at: coordinate)
                         }
                     }
                 }
-                .onTapGesture { position in
-                    if let coordinate = proxy.convert(position, from: .local) {
-                        print("Tapped at \(coordinate)")
-                        
-                        viewModel.addLocation(at: coordinate)
-                    }
+            }
+            .sheet(item: $viewModel.selectedPlace) { place in
+                EditMapMarkerView(location: place) { newLocation in
+                    viewModel.updateLocation(newLocation)
                 }
             }
-        }
-        .sheet(item: $viewModel.selectedPlace) { place in
-            EditMapMarkerView(location: place) { newLocation in
-                viewModel.updateLocation(newLocation)
-            }
+        } else {
+            Button("Unlock Places", action: viewModel.authenticate)
+                .padding()
+                .background(.customColorGhostWhite)
+                .foregroundStyle(.primary)
+                .clipShape(.rect(cornerRadius: 25))
+                .shadow(color: .black.opacity(0.35), radius: 10)
         }
     }
 }
