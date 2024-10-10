@@ -76,7 +76,9 @@ extension ContentView {
                 
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                     if success {
-                        self.isUnlocked = true
+                        DispatchQueue.main.async {
+                            self.isUnlocked = true
+                        }
                     } else {
                         //error
                         print("Unable to unlock using biometrics")

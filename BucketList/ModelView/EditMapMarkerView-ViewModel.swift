@@ -52,14 +52,20 @@ extension EditMapMarkerView {
             urlRequest.httpMethod = "GET"
             
             do {
+                
+                
                 let (data, _) = try await URLSession.shared.data(for: urlRequest)
 
                 let result = try JSONDecoder().decode(Result.self, from: data)
-
-                pages = result.query.pages.values.sorted()
-                loadingState = .loaded
+                
+                DispatchQueue.main.async {
+                    self.pages = result.query.pages.values.sorted()
+                    self.loadingState = .loaded
+                }
             } catch {
-                loadingState = .failed
+                DispatchQueue.main.async {
+                    self.loadingState = .failed
+                }
                 print("Error retrieving data: \(error.localizedDescription)")
             }
         }
