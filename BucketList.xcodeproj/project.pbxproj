@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8466043F2CB635D000CECC69 /* PracticeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8466043E2CB635D000CECC69 /* PracticeMap.swift */; };
 		847CEB132C83A1D900482D11 /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB122C83A1D900482D11 /* BucketListApp.swift */; };
 		847CEB152C83A1D900482D11 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847CEB142C83A1D900482D11 /* ContentView.swift */; };
 		847CEB172C83A1DB00482D11 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847CEB162C83A1DB00482D11 /* Assets.xcassets */; };
@@ -31,6 +32,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8466043E2CB635D000CECC69 /* PracticeMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PracticeMap.swift; sourceTree = "<group>"; };
 		847CEB0F2C83A1D900482D11 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847CEB122C83A1D900482D11 /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
 		847CEB142C83A1D900482D11 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -85,10 +87,10 @@
 		847CEB112C83A1D900482D11 /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
-				8481635E2C974B9E00E90001 /* ModelView */,
-				84A2782C2C92AAF60063C375 /* View */,
-				847CEB232C8F7B6300482D11 /* Learning */,
 				847CEB202C8F6D0400482D11 /* Model */,
+				84A2782C2C92AAF60063C375 /* View */,
+				8481635E2C974B9E00E90001 /* ModelView */,
+				847CEB232C8F7B6300482D11 /* Learning */,
 				847CEB122C83A1D900482D11 /* BucketListApp.swift */,
 				847CEB142C83A1D900482D11 /* ContentView.swift */,
 				847CEB162C83A1DB00482D11 /* Assets.xcassets */,
@@ -127,6 +129,7 @@
 				847CEB282C8F802200482D11 /* IntegratingMapKit.swift */,
 				847CEB2A2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift */,
 				84A278282C9122890063C375 /* TestFile.swift */,
+				8466043E2CB635D000CECC69 /* PracticeMap.swift */,
 			);
 			path = Learning;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 				847CEB2B2C90F0A200482D11 /* UsingTouchIDAndFaceID.swift in Sources */,
 				8481635D2C93F77900E90001 /* LoadingState.swift in Sources */,
 				84A278322C939F960063C375 /* CustomColors.swift in Sources */,
+				8466043F2CB635D000CECC69 /* PracticeMap.swift in Sources */,
 				847CEB132C83A1D900482D11 /* BucketListApp.swift in Sources */,
 				8481635B2C93F68A00E90001 /* Page.swift in Sources */,
 			);

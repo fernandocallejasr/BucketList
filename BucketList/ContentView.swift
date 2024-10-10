@@ -19,14 +19,20 @@ struct ContentView: View {
     )
 
     var body: some View {
-        if viewModel.isUnlocked {
+        if !viewModel.isUnlocked {
             ZStack(alignment: .bottom) {
                 MapReader { proxy in
                     Map(initialPosition: startPosition) {
                         ForEach(viewModel.locations) { location in
                             Annotation(location.name,coordinate: location.coordinate) {
                                 CustomMapMarkerAnnotation()
-                                    .onLongPressGesture {
+                                    .onLongPressGesture(minimumDuration: 5) {
+                                        print("Long Pressed")
+                                    } onPressingChanged: { changed in
+//                                        if changed {
+//                                            print("Long Tap")
+//                                            viewModel.selectedPlace = location
+//                                        }
                                         viewModel.selectedPlace = location
                                     }
                             }
