@@ -19,7 +19,7 @@ struct ContentView: View {
     )
 
     var body: some View {
-        if !viewModel.isUnlocked {
+        if viewModel.isUnlocked {
             ZStack(alignment: .bottom) {
                 MapReader { proxy in
                     Map(initialPosition: startPosition) {
